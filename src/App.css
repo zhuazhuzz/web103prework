@@ -1,0 +1,54 @@
+
+
+
+
+
+.content-creator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+  gap: 16px;
+  padding: 16px;
+}
+
+.content-creator-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.content-creator-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.content-creator-card h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.content-creator-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+.content-creator-card a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+
+
+.content-creator-grid::after { /* Centers the last contentCreator if number of contentCreators is odd */
+  content: '';
+  display: block;
+}
+
+.content-creator-grid > *:nth-child(odd):last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
