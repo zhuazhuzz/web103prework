@@ -1,11 +1,7 @@
-
-
-
-
-
+/* Start of contentCreatorCard css ------------------------------------------------------------------*/
 .content-creator-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 16px;
   padding: 16px;
 }
@@ -41,9 +37,7 @@
   text-decoration: none;
 }
 
-
-
-.content-creator-grid::after { /* Centers the last contentCreator if number of contentCreators is odd */
+.content-creator-grid::after { /* Centers the last contentCreator if odd # of ppl */
   content: '';
   display: block;
 }
@@ -51,4 +45,46 @@
 .content-creator-grid > *:nth-child(odd):last-child {
   grid-column: 1 / -1;
   justify-self: center;
+} 
+/* END of contentCreatorCard css -------------------------------------------------------------------------------*/
+
+h1 {
+  text-align: center;
 }
+
+/* Navigation Header Bar -------------------------------------------------------------------------------*/
+header {
+  background-image: url('./assets/earth.jpg'); 
+  background-size: cover;
+  background-position: center;
+  padding: 90px;
+  color: white;
+}
+header .nav-container {
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  margin: 0 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+  border-color: rgba(255, 255, 255, 0.7); /* Lighter border on hover */
+}
+/* END of Navigation Header Bar -------------------------------------------------------------------------------*/
