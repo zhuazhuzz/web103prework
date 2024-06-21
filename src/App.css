@@ -7,11 +7,13 @@
 }
 
 .content-creator-card {
-  border: 1px solid #ddd;
-  padding: 16px;
+  position: relative;
+  border: 1px solid #ccc;
   border-radius: 8px;
+  padding: 20px;
+  margin: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background-color: hwb(0 95% 5%);
 }
 
 .content-creator-image {
@@ -46,11 +48,25 @@
   grid-column: 1 / -1;
   justify-self: center;
 } 
+
+.button-container { /* Info and Edit Buttons -------------------------------- */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.icon-link {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
 /* END of contentCreatorCard css -------------------------------------------------------------------------------*/
 
-h1 {
-  text-align: center;
-}
+
 
 /* Navigation Header Bar -------------------------------------------------------------------------------*/
 header {
@@ -80,11 +96,149 @@ nav a {
   padding: 10px 20px;
   border: 2px solid white;
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7);
   transition: background-color 0.3s, border-color 0.3s;
 }
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+  background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
   border-color: rgba(255, 255, 255, 0.7); /* Lighter border on hover */
 }
 /* END of Navigation Header Bar -------------------------------------------------------------------------------*/
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: hwb(212 7% 78%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* ViewCreator Page ======================================================= */
+
+.view-creator {
+  text-align: center;
+}
+
+.view-creator h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.view-creator h2 {
+  color: #555;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.view-creator p {
+  color: #666;
+  font-size: 16px;
+}
+
+.view-creator a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.view-creator a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================================================== */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+.youtube-link {
+  
+  color: green; 
+  margin-top: 10px;
+}

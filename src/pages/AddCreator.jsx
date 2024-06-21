@@ -45,10 +45,9 @@ export default function AddCreator() {
   
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="container">
+    <form onSubmit={handleSubmit} className="content-creator-add">
       <div>
-      
-
         <input
           type="text"
           name="name"
@@ -86,5 +85,6 @@ export default function AddCreator() {
       </div>
       <button type="submit">Add Creator</button>
     </form>
+    </div>
   );
 }

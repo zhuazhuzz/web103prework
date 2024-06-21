@@ -14,7 +14,8 @@ export default function ShowCreators() {
       setLoading(true);
       const { data, error } = await supabase
         .from('creators')
-        .select('*');
+        .select('*')
+        .order('id', { ascending: true });
 
       if (error) {
         setError(error.message);
@@ -27,19 +28,14 @@ export default function ShowCreators() {
     fetchCreators();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
 
-  return (
+  return creators.length === 0 ? <h1> Add some Creators! </h1> : (
     <div className="content-creator-grid">
-        {creators.map((creator, index) => (
+        { creators.map((creator, index) => (
           <ContentCreatorCard
                 key={index}
-                name={creator.name}
-                url={creator.url}
-                description={creator.description}
-                imageURL={creator.imageURL}
-              />
+                creator={creator}
+          />
         ))}
      </div>
   );

@@ -7,6 +7,7 @@ import ShowCreators from './pages/ShowCreators.jsx'
 import ViewCreator from './pages/ViewCreator.jsx'
 import NotFound from './pages/NotFound.jsx'
 import AddCreator from './pages/AddCreator.jsx'
+import EditCreator from './pages/EditCreator.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
     element: <AddCreator />
   },
   {
-    path: '/editCreator',
-    element: <ViewCreator />
+    path: '/edit/:id',
+    element: <EditCreator />
   },
   {
-    path: '/addCreator',
+    path: '/view/:id',
     element: <ViewCreator />
   },
 
