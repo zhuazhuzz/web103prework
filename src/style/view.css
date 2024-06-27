@@ -1,0 +1,67 @@
+
+.view-creator {
+    text-align: center;
+}
+  
+.view-creator h2 {
+    color: hsl(0, 0%, 7%);
+    font-size: 37px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+    
+.view-creator a {
+    color: #007bff;
+    text-decoration: none;
+}
+.view-creator a:hover {
+    text-decoration: underline;
+}
+
+.container-view {
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.creator-image-view {
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.listView {
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+}
+
+.listView li {
+    flex: 1; 
+    text-align: center; 
+    padding: 30px; 
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.content-creator-delete {
+    margin-top: 20px;
+}
+
+.content-creator-delete button[type="submit"] {
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .content-creator-delete button[type="submit"]:hover {
+    background-color: hsl(1, 83%, 44%);
+  }

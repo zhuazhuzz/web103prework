@@ -29,7 +29,7 @@ export default function ShowCreators() {
   }, []);
 
 
-  return creators.length === 0 ? <h1> Add some Creators! </h1> : (
+  return creators.length === 0 ? <h1> </h1> : (
     <div className="content-creator-grid">
         { creators.map((creator, index) => (
           <ContentCreatorCard

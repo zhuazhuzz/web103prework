@@ -22,6 +22,7 @@ export default function ContentCreatorCard({ creator }) {
       <Link to={creator.url} target="_blank" rel="noopener noreferrer" className="youtube-link">
       <YouTube fontSize="large" />
       </Link>
+     
       
     </div>
   

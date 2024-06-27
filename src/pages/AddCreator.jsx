@@ -14,8 +14,20 @@ export default function AddCreator() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const { error } = await supabase
+      try { // See if URL exists already
+        const { data: existingCreators, error } = await supabase
+        .from('creators')
+        .select('*')
+        .eq('url', data.url);
+      if (error) { throw error }
+
+      if (existingCreators && existingCreators.length > 0) {
+        alert('A creator with the same URL already exists. Please use a different URL.');
+        return;
+      }
+
+      //Otherwise Insert
+      const { error: insertError } = await supabase
         .from('creators')
         .insert([
           {
@@ -26,7 +38,7 @@ export default function AddCreator() {
           }
         ]);
 
-      if (error) { throw error }
+      if (insertError) { throw insertError }
 
       navigate('/');
       console.log('Creator added successfully!');
